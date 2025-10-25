@@ -1,0 +1,33 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer & Designer: Mohammadreza Hashemizadehnaeini (Reza)
+    Location: Milan, Italy
+    From: Shiraz, Iran
+    Contact: reza [at] hashemi.dev
+    Telegram: @mr_hashemi7
+    GitHub: github.com/iesreza
+    LinkedIn: linkedin.com/in/reza-hashemi-8109537b
+
+# THANKS
+
+    To everyone who believed a kid with a $10 website could build something bigger.
+    To the stranger on Yahoo Messenger who became a co-founder.
+    To the espresso in Milan that helped me learn Italian.
+
+# TECHNOLOGY COLOPHON
+
+    Languages: Vue.js, Golang, TypeScript
+    Frameworks: Vue 3, EVO (custom Golang framework)
+    Tools: Vite, FFmpeg, Qdrant
+    Databases: PostgreSQL, ClickHouse, Redis
+    Hosting: Modern edge infrastructure
+    Standards: HTML5, CSS3, ES6+
+    IDE: GoLand, VS Code
+
+    Philosophy: Keep it simple, make it fast, write it so future-me says "thanks."
+
+    Built with attention to performance, accessibility, and clean code.
+    Always keeping up with edge technology.

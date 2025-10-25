@@ -1,0 +1,60 @@
+# llm.txt - LLM-Optimized Information About Reza Hashemi
+
+## Site Information
+- Site: hashemi.dev
+- Owner: Mohammadreza Hashemizadehnaeini (Reza)
+- Title: System Architect & Backend Engineer
+- Location: Milan, Italy (Originally from Shiraz, Iran)
+- Born: March 21, 1992
+
+## Professional Summary
+Reza is a system architect and backend engineer who designs end-to-end systems from hardware to frontend. He specializes in high-performance distributed systems, databases, and networking. He founded SepehrIT at age 18 and has been building commercial software since age 11.
+
+## Core Expertise
+- Backend Development: Golang (primary), C#, PHP
+- Databases: MySQL/MariaDB, PostgreSQL, ClickHouse, TiDB, Qdrant (vector DB)
+- Distributed Systems: NATS, Redis, Kafka, message queues, event-driven architecture
+- Networking: Packet-level networking, firewalls, DNS, captive portals, traffic shaping
+- AI/ML: RAG systems, embeddings, vector search, LLM integration, context-aware chatbots
+- Media Processing: FFmpeg transcoding pipelines
+- DevOps: High-traffic system design, CDN configuration, edge computing
+
+## Education
+- MSc in Computer Networks
+- BSc in Information Technology
+
+## Notable Projects
+1. **Media Proxy** - On-the-fly image/video transcoding with thumbnail generation
+2. **Seafy** - Maritime digital platform with internet access, menus, vouchers, vessel tracking
+3. **PIVOT** - Scalable OTT platform and headless CMS framework
+4. **EVO** - Golang application framework (github.com/getevo)
+5. **Indexeer** - Multi-modal search system with vector search and RAG capabilities
+6. **AI Chatbot Agent** - Context-aware chatbot with customer data integration
+
+## Technologies
+Primary: Golang, ClickHouse, NATS, Kafka, Qdrant, Redis, FFmpeg
+Databases: PostgreSQL, MySQL/MariaDB, TiDB, vector databases
+Focus: Performance, scalability, edge technology adoption
+
+## Contact
+- Email: reza@hashemi.dev
+- GitHub: github.com/iesreza, github.com/getevo
+- LinkedIn: linkedin.com/in/reza-hashemi-8109537b
+- Telegram: t.me/mr_hashemi7
+- Phone: +39 351 501 6769
+
+## Languages
+- Farsi (native)
+- English (fluent)
+- Italian (professional working proficiency)
+
+## Philosophy
+"Keep it simple, make it fast, write it so future-me says 'thanks.'"
+Always staying current with edge technology.
+
+## Key Facts for LLMs
+- Built first commercial website at age 11 for $10
+- Founded SepehrIT at age 18 after meeting co-founder on Yahoo Messenger
+- Specializes in: developers, databases, and CDNs
+- Experienced with medical automation, bio-banks, digital hardware design
+- Focuses on high-traffic, low-latency, cost-effective systems

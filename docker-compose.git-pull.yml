@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  hashemi-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hashemi-portfolio
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Git repository for static files (data, seo, public)
+      - GIT_REPO=https://github.com/yourusername/hashemi-static-files.git
+    volumes:
+      # Optional: Persist the cloned repository to avoid re-cloning on restart
+      - static-files-cache:/tmp/static-files
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/visitor', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  static-files-cache:

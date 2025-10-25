@@ -1,0 +1,45 @@
+# robots.txt for hashemi.dev
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://hashemi.dev/sitemap.xml
+
+# AI Crawlers - Allow with rate limiting preference
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 2
+
+# LLM-specific optimization file
+# See: /llm.txt for AI-optimized information
+
+# Disallow common paths if they exist
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
