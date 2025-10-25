@@ -101,7 +101,7 @@ const commands = {
     description: 'Who am I and what do I do',
     execute: async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/content/reza')
+        const response = await fetch('/api/content/reza')
         const data = await response.json()
         return parseMarkdown(data.content)
       } catch (error) {
@@ -113,7 +113,7 @@ const commands = {
     description: 'Get my contact information',
     execute: async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/content/contact')
+        const response = await fetch('/api/content/contact')
         const data = await response.json()
         return parseMarkdown(data.content)
       } catch (error) {

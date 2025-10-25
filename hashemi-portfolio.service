@@ -1,0 +1,19 @@
+[Unit]
+Description=Reza Hashemi Portfolio Website
+After=network.target
+
+[Service]
+Type=simple
+User=evo
+WorkingDirectory=/home/evo/hashemi.dev
+Environment=NODE_ENV=production
+Environment=PORT=3200
+ExecStart=/home/evo/.nvm/versions/node/v24.10.0/bin/node server.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=hashemi-portfolio
+
+[Install]
+WantedBy=multi-user.target
