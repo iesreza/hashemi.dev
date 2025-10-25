@@ -1,10 +1,16 @@
 server {
-    listen 80;
-    listen [::]:80;
     server_name hashemi.dev www.hashemi.dev;
 
     root /home/evo/hashemi.dev/dist;
     index index.html;
+
+    # Serve data folder (images, markdown files, etc.)
+    # ^~ modifier means stop searching if this matches (takes priority over regex)
+    location ^~ /data/ {
+        alias /home/evo/hashemi.dev/data/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
 
     # Route API requests to backend on port 3200
     location /api/ {
@@ -39,4 +45,33 @@ server {
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/hashemi.dev/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/hashemi.dev/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+server {
+    if ($host = www.hashemi.dev) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = hashemi.dev) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    listen [::]:80;
+    server_name hashemi.dev www.hashemi.dev;
+    return 404; # managed by Certbot
+
+
+
+
 }
