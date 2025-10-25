@@ -82,9 +82,9 @@ const commands = {
       return `
 <div class="help-output">
   <div class="welcome-intro">Hello, stranger from ${visitorInfo.value.ip} (${visitorInfo.value.city}). Welcome to my humble console—I'm Reza.</div>
-  <div class="welcome-intro">Want to know more? Type <span class="cmd">whoami</span> at the prompt. You can also try:</div>
+  <div class="welcome-intro">Want to know more? Type <span class="cmd">whoami</span> or <span class="cmd">about</span> at the prompt. You can also try:</div>
   <br>
-  <div class="md-li">• <span class="cmd">whoami</span> - Learn about me</div>
+  <div class="md-li">• <span class="cmd">whoami</span> / <span class="cmd">about</span> - Learn about me</div>
   <div class="md-li">• <span class="cmd">contact</span> - Get my contact info</div>
   <div class="md-li">• <span class="cmd">wannaseeyou</span> - See my photo</div>
   <div class="md-li">• <span class="cmd">neofetch</span> - Display system information</div>
@@ -99,6 +99,18 @@ const commands = {
   },
   whoami: {
     description: 'Who am I and what do I do',
+    execute: async () => {
+      try {
+        const response = await fetch('/api/content/reza')
+        const data = await response.json()
+        return parseMarkdown(data.content)
+      } catch (error) {
+        return '<div class="error">Failed to load content. Make sure the backend server is running.</div>'
+      }
+    }
+  },
+  about: {
+    description: 'Who am I and what do I do (alias for whoami)',
     execute: async () => {
       try {
         const response = await fetch('/api/content/reza')
@@ -274,9 +286,9 @@ onMounted(async () => {
   const welcomeMessage = `
 <div class="help-output">
   <div class="welcome-intro">Hello, stranger from ${visitorInfo.value.ip} (${visitorInfo.value.city}). Welcome to my humble console—I'm Reza.</div>
-  <div class="welcome-intro">Want to know more? Type <span class="cmd">whoami</span> at the prompt. You can also try:</div>
+  <div class="welcome-intro">Want to know more? Type <span class="cmd">whoami</span> or <span class="cmd">about</span> at the prompt. You can also try:</div>
   <br>
-  <div class="md-li">• <span class="cmd">whoami</span> - Learn about me</div>
+  <div class="md-li">• <span class="cmd">whoami</span> / <span class="cmd">about</span> - Learn about me</div>
   <div class="md-li">• <span class="cmd">contact</span> - Get my contact info</div>
   <div class="md-li">• <span class="cmd">wannaseeyou</span> - See my photo</div>
   <div class="md-li">• <span class="cmd">neofetch</span> - Display system information</div>
